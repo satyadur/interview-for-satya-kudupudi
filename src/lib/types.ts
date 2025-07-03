@@ -33,6 +33,8 @@ export interface Rocket {
 export interface Payload {
   id: string;
   orbit: string | null;
+  type: string; // Added to fix TS2339
+  name: string;
 }
 
 export interface TableLaunch {

@@ -28,7 +28,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { FadeLoader } from "react-spinners";
-import { type DateRange } from "react-day-picker";
 import { Button } from "@/components/ui/button";
 import { format, subWeeks, subMonths, subYears } from "date-fns";
 import type { Launch, TableLaunch } from "@/lib/types";
@@ -39,6 +38,10 @@ import { usePayloads } from "./api/fetchPayloads";
 import { CustomRangeCalendar } from "./CustomRangeCalendar";
 import { truncateText } from "@/lib/utils";
 
+type DateRangeCustom = {
+  from?: Date;
+  to?: Date;
+};
 // Date formatter for '24 March 2006 at 22:30' format
 const formatDate = (dateString: string): string => {
   try {
@@ -100,7 +103,7 @@ const Process = () => {
   const [timeframe, setTimeframe] = useState<string | null>(null);
   const [launchType, setLaunchType] = useState<string>("all");
   const [isTimeframeDialogOpen, setIsTimeframeDialogOpen] = useState(false);
-  const [dateRange, setDateRange] = useState<DateRange>({
+  const [dateRange, setDateRange] = useState<DateRangeCustom>({
     from: undefined,
     to: undefined,
   });
@@ -360,6 +363,20 @@ const Process = () => {
                     setTimeframe(null);
                   }}
                 />
+                  <div className="w-full flex justify-end items-end">
+            <Button
+              className="bg-[#60A5FA] text-white hover:bg-[#3B82F6]"
+              onClick={() => {
+                if (dateRange.from) {
+                  setIsTimeframeDialogOpen(false);
+                }
+              }}
+              disabled={!dateRange.from}
+              data-testid="apply-date-range"
+            >
+              Apply
+            </Button>
+          </div>
               </div>
             </div>
           </div>
