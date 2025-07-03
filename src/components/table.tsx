@@ -278,7 +278,7 @@ const Process = () => {
       <div className="flex justify-between items-center mb-6">
         <Button
           onClick={() => setIsTimeframeDialogOpen(true)}
-          className="w-[180px] border-none cursor-pointer text-[#4B5563] hover:bg-gray-200"
+          className="w-[180px] border-none cursor-pointer bg-white text-[#4B5563] hover:bg-gray-200"
           data-testid="timeframe-button"
         >
           <CalenderIcon /> {timeframeLabel} <ChevronDown />
