@@ -592,7 +592,7 @@ const Process = () => {
                         data-testid="nasa-link"
                       >
                         <img
-                          src="/nasa.png"
+                          src="/assets/nasa.png"
                           alt="NASA"
                           className="h-5 w-5 object-contain"
                         />
@@ -607,7 +607,7 @@ const Process = () => {
                         data-testid="wikipedia-link"
                       >
                         <img
-                          src="/src/assets/wiki.png"
+                          src="/assets/wiki.png"
                           alt="Wikipedia"
                           className="h-5 w-5 object-contain"
                         />
@@ -622,7 +622,7 @@ const Process = () => {
                         data-testid="youtube-link"
                       >
                         <img
-                          src="/src/assets/you.png"
+                          src="/assets/you.png"
                           alt="YouTube"
                           className="h-5 w-5 object-contain"
                         />
