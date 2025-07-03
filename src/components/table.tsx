@@ -592,7 +592,7 @@ const Process = () => {
                         data-testid="nasa-link"
                       >
                         <img
-                          src="/assets/nasa.png"
+                          src="/nasa.png"
                           alt="NASA"
                           className="h-5 w-5 object-contain"
                         />
